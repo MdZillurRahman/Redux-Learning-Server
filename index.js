@@ -27,7 +27,7 @@ const client = new MongoClient(uri, {
 
 async function run() {
   try {
-    // await client.connect();
+    await client.connect();
     // new MongoClient();
     const documentationsCollection = client
       .db("redux-learning")
@@ -416,7 +416,7 @@ async function run() {
       res.send(result);
     });
   } finally {
-    // await client.close();
+    await client.close();
   }
 }
 
